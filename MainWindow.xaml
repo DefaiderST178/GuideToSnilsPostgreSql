@@ -30,7 +30,7 @@
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="2">
-                <Label Content="s"/>
+                <Label Content="ЫАУ"/>
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="3">
