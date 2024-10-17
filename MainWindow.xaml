@@ -25,12 +25,12 @@
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1">
                 <StackPanel Orientation="Vertical">
                     <Label Content="Улиточки приветствуют Вас!" Style="{StaticResource TitleTextStyle}"/>
-                    <Label Content="Здесь вы найдете исче"/>
+                    <Label Content="Здесь вы найдете исчерпывающую информацию &#xA;о различных видах улиток, их особенностях и &#xD;&#xA;требониях к содержанию.&#xA;" Height="94" Width="437"/>
                 </StackPanel>
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="2">
-
+                <Label Content="s"/>
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="3">
@@ -48,21 +48,21 @@
 
 
                     <Button Content="Справочник" Margin="5,0" Grid.Column="0" Grid.Row="0">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
 
                     <Button Content="Советы" Margin="5,0" Grid.Column="0" Grid.Row="1">
-                            <Button.Resources>
-                                <Style TargetType="Border">
-                                    <Setter Property="CornerRadius" Value="10"/>
-                                </Style>
-                            </Button.Resources>
-                        </Button>
-                    
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
 
                     <Image Grid.Column="1" Grid.RowSpan="2" Margin="20,7" Source="/Image/zastavka.png" Width="75" Height="75"/>
 
