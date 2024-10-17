@@ -1,0 +1,54 @@
+﻿<Window x:Class="GuideToSnilsPostgreSql.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuideToSnilsPostgreSql"
+        mc:Ignorable="d"
+        Title="Главная страница - Улиточки" Height="450" Width="500" MinHeight="450" MinWidth="500">
+    <Viewbox >
+        <Grid MinHeight="450" MinWidth="500" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="70*"/>
+                <RowDefinition Height="78*"/>
+                <RowDefinition Height="45*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Style="{StaticResource TitleBorder}" Grid.Row="0">
+                <Label Content="Улиточки"/>
+            </Border>
+
+            <Border Style="{StaticResource MainBorder}" Grid.Row="1">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Улиточки приветствуют Вас!"/>
+                    <Label />
+                </StackPanel>
+            </Border>
+
+            <Border Style="{StaticResource MainBorder}" Grid.Row="2">
+
+            </Border>
+
+            <Border Style="{StaticResource MainBorder}" Grid.Row="3">
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="371*"/>
+                        <ColumnDefinition Width="103*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="1" Grid.RowSpan="2" Margin="20,7"/>
+
+                </Grid>
+            </Border>
+
+        </Grid>
+    </Viewbox>
+</Window>
