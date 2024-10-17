@@ -1,30 +1,42 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Style TargetType="Window">
+    <Style TargetType="Window" x:Key="WindowStyle">
         <Setter Property="Background" Value="{StaticResource BackgroundGreenBrush}"/>
+        <Setter Property="Icon" Value="/Image/zastavka.png"/>
     </Style>
     
-    <Style TargetType="Border" x:Key="MainBorder">
+    <Style TargetType="Border" x:Key="MainBorderStyle">
         <Setter Property="CornerRadius" Value="25"/>
         <Setter Property="Margin" Value="10,5"/>
         <Setter Property="Background" Value="{StaticResource FrameGreenBrush}"/>
     </Style>
 
-    <Style TargetType="Border" x:Key="TitleBorder">
+    <Style TargetType="Border" x:Key="TitleBorderStyle">
         <Setter Property="CornerRadius" Value="25"/>
         <Setter Property="Margin" Value="10,5"/>
         <Setter Property="Background" Value="{StaticResource DarkBrush}"/>
     </Style>
 
-    <Style TargetType="Label">
+    <Style TargetType="Label" x:Key="TitleTextStyle">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontSize" Value="24"/>
         <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource TitleTextBrush}"/>
+    </Style>
+
+    <Style TargetType="Label" >
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="18"/>
         <Setter Property="Foreground" Value="{StaticResource MainTextBrush}"/>
     </Style>
-    
-    
+
+    <Style TargetType="Button" >
+        <Setter Property="Background" Value="{StaticResource DarkBrush}"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Height" Value="30"/>
+    </Style>
 
 </ResourceDictionary>

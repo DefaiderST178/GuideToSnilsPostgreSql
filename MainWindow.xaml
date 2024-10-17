@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql"
         mc:Ignorable="d"
-        Title="Главная страница - Улиточки" Height="450" Width="500" MinHeight="450" MinWidth="500">
+        Title="Главная страница - Улиточки" Height="450" Width="500" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}">
     <Viewbox >
         <Grid MinHeight="450" MinWidth="500" Margin="5">
             <Grid.RowDefinitions>
@@ -18,22 +18,22 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Style="{StaticResource TitleBorder}" Grid.Row="0">
-                <Label Content="Улиточки"/>
+            <Border Style="{StaticResource TitleBorderStyle}" Grid.Row="0">
+                <Label Content="Улиточки" Style="{StaticResource TitleTextStyle}"/>
             </Border>
 
-            <Border Style="{StaticResource MainBorder}" Grid.Row="1">
+            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1">
                 <StackPanel Orientation="Vertical">
-                    <Label Content="Улиточки приветствуют Вас!"/>
-                    <Label />
+                    <Label Content="Улиточки приветствуют Вас!" Style="{StaticResource TitleTextStyle}"/>
+                    <Label Content="Здесь вы найдете исче"/>
                 </StackPanel>
             </Border>
 
-            <Border Style="{StaticResource MainBorder}" Grid.Row="2">
+            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="2">
 
             </Border>
 
-            <Border Style="{StaticResource MainBorder}" Grid.Row="3">
+            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="3">
                 <Grid Margin="3">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
@@ -44,7 +44,27 @@
                         <ColumnDefinition Width="103*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Image Grid.Column="1" Grid.RowSpan="2" Margin="20,7"/>
+
+
+
+                    <Button Content="Справочник" Margin="5,0" Grid.Column="0" Grid.Row="0">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+
+                    <Button Content="Советы" Margin="5,0" Grid.Column="0" Grid.Row="1">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"/>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    
+
+                    <Image Grid.Column="1" Grid.RowSpan="2" Margin="20,7" Source="/Image/zastavka.png" Width="75" Height="75"/>
 
                 </Grid>
             </Border>
