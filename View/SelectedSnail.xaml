@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql.View"
         mc:Ignorable="d"
-        Title="SelectedSnail" Height="450" Width="800" Style="{StaticResource WindowStyle}">
-    <Grid>
+        Title="SelectedSnail" Height="600" Width="1000" Style="{StaticResource WindowStyle}">
+    <Grid Margin="5">
         
     </Grid>
 </Window>

@@ -23,5 +23,15 @@ namespace GuideToSnilsPostgreSql.View
         {
             InitializeComponent();
         }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e) // назад
+        {
+
+        }
+
+        private void NotesBtn_Click(object sender, RoutedEventArgs e) // открытие статей
+        {
+
+        }
     }
 }

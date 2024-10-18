@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql"
         mc:Ignorable="d"
-        Title="Главная страница - Улиточки" Height="450" Width="500" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}">
+        Title="Главная страница - Улиточки" MinHeight="400" MinWidth="400" Style="{StaticResource WindowStyle}">
     <Viewbox >
         <Grid MinHeight="450" MinWidth="500" Margin="5">
             <Grid.RowDefinitions>
@@ -30,7 +30,7 @@
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="2">
-                <Label Content="ЫАУ"/>
+                <Label FontSize="16" Content="Наше приложение предназначено как для начинающих,&#xD;&#xA;так и для опытных любителей улиток. Мы постарались &#xD;&#xA;сделать его максимально удобным и информативным,&#xD;&#xA;чтобы каждый пользователь мог найти ответы на все &#xD;&#xA;свои вопросы." Height="131" Width="460"/>
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="3">
@@ -44,10 +44,8 @@
                         <ColumnDefinition Width="103*"/>
                     </Grid.ColumnDefinitions>
 
-
-
-
-                    <Button Content="Справочник" Margin="5,0" Grid.Column="0" Grid.Row="0">
+                    <Button Content="Справочник" x:Name="SnailsBtn" Click="SnailsBtn_Click" Margin="5,0" Grid.Column="0" Grid.Row="0"
+                            Height="30" Width="150">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>
@@ -55,14 +53,14 @@
                         </Button.Resources>
                     </Button>
 
-                    <Button Content="Советы" Margin="5,0" Grid.Column="0" Grid.Row="1">
+                    <Button Content="Советы" x:Name="NotesBtn" Click="NotesBtn_Click" Margin="5,0" Grid.Column="0" Grid.Row="1"
+                            Height="30" Width="150">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>
                             </Style>
                         </Button.Resources>
                     </Button>
-
 
                     <Image Grid.Column="1" Grid.RowSpan="2" Margin="20,7" Source="/Image/zastavka.png" Width="75" Height="75"/>
 

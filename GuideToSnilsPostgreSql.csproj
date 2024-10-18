@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Snail.cs" />
     <Compile Include="View\AllSnails.xaml.cs">
       <DependentUpon>AllSnails.xaml</DependentUpon>
     </Compile>
@@ -116,9 +117,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Image\zastavka.png" />
   </ItemGroup>

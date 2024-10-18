@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql.View"
         mc:Ignorable="d"
-        Title="AllSnails" Height="450" Width="800" Style="{StaticResource WindowStyle}">
-    <Grid>
-        
+        Title="AllSnails" Height="450" Width="579" Style="{StaticResource WindowStyle}">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="319*"/>
+            <RowDefinition Height="115*"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" >
+            <ListView Padding="10" Background="{StaticResource BackgroundGreenBrush}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource MainBorderStyle}">
+
+                            <StackPanel Orientation="Vertical">
+                                <Label />
+                                <Label />
+                            </StackPanel>
+
+                        </Border>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+
+        <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1" >
+            <Grid Margin="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48*"/>
+                    <ColumnDefinition Width="31*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Content="Назад" x:Name="BackBtn" Click="BackBtn_Click" Margin="112,4,24,5" Grid.Column="0" Grid.Row="1">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Content="Советы" x:Name="NotesBtn" Click="NotesBtn_Click" Margin="112,5,24,5" Grid.Column="0" Grid.Row="0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+
+                <Image Grid.Column="1" Grid.RowSpan="2" Margin="5" Source="/Image/zastavka.png" MinWidth="75" MinHeight="75"/>
+
+            </Grid>
+        </Border>
+
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuideToSnilsPostgreSql.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,27 @@ namespace GuideToSnilsPostgreSql
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void SnailsBtn_Click(object sender, RoutedEventArgs e) // открытие справочника
+        {
+            try
+            {
+                AllSnails allSnails = new AllSnails();
+                this.Hide();
+                allSnails.Show();
+                this.Close();
+                MessageBox.Show("Переход успешен","Система",MessageBoxButton.OK,MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка\n"+ex, "Система", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void NotesBtn_Click(object sender, RoutedEventArgs e) // открытие статей
+        {
+
         }
     }
 }
