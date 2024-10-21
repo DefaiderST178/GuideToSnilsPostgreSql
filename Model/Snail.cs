@@ -1,20 +1,15 @@
-﻿using System.Collections.Generic;
-
-namespace GuideToSnilsPostgreSql.Model
+﻿namespace GuideToSnilsPostgreSql.Model
 {
     public class Snail
     {
-        // Основная информация
-        public string Name { get; set; } // Название
-        public string ScientificName { get; set; } // Научное название
-        public string Description { get; set; } // Описание
-        // List<>
-        public string Images { get; set; } // Изображения
-
-        // Физические характеристики
-        public string AverageShellSize { get; set; } // Средний размер раковины в миллиметрах
-        public string ShellColor { get; set; } // Цвет раковины
-        public string BodyColor { get; set; } // Цвет тела
-        public string LifespanInYears { get; set; } // Срок жизни
+        public int ID_snail { get; set; }
+        public string Name { get; set; }
+        public string ScientificName { get; set; }
+        public string Description { get; set; }
+        public string Images { get; set; }
+        public string AverageShellSize { get; set; }
+        public string ShellColor { get; set; }
+        public string BodyColor { get; set; }
+        public string LifeSpanInYears { get; set; }
     }
 }

@@ -5,62 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql.View"
         mc:Ignorable="d"
-        Title="AllSnails" Height="450" Width="579" Style="{StaticResource WindowStyle}">
-    <Grid >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="319*"/>
-            <RowDefinition Height="115*"/>
-        </Grid.RowDefinitions>
+        Title="Справочник по улиткам" Height="450" Width="500" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}">
+    <Viewbox>
+        <Grid Height="450" Width="500">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="151*"/>
+                <RowDefinition Height="66*"/>
+            </Grid.RowDefinitions>
 
-        <ScrollViewer Grid.Row="0" >
-            <ListView Padding="10" Background="{StaticResource BackgroundGreenBrush}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <Border Style="{StaticResource MainBorderStyle}">
+            <ScrollViewer Grid.Row="0" >
+                <ListView Padding="10" x:Name="snailListView" SelectionChanged="SnailsList_SelectionChanged" Background="{StaticResource BackgroundGreenBrush}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource MainBorderStyle}" MinWidth="500" MinHeight="75">
 
-                            <StackPanel Orientation="Vertical">
-                                <Label />
-                                <Label />
-                            </StackPanel>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
 
-                        </Border>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </ScrollViewer>
+                                    <Label Content="{Binding Name}" Grid.Row="0" Grid.Column="0"/>
+                                    <Label Content="{Binding ScientificName}" Grid.Row="1" Grid.Column="0"/>
+                                </Grid>
 
-        <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1" >
-            <Grid Margin="3">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="1*"/>
-                    <RowDefinition Height="1*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="48*"/>
-                    <ColumnDefinition Width="31*"/>
-                </Grid.ColumnDefinitions>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
 
-                <Button Content="Назад" x:Name="BackBtn" Click="BackBtn_Click" Margin="112,4,24,5" Grid.Column="0" Grid.Row="1">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
+            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1" >
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="48*"/>
+                        <ColumnDefinition Width="31*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Button Content="Советы" x:Name="NotesBtn" Click="NotesBtn_Click" Margin="112,5,24,5" Grid.Column="0" Grid.Row="0">
-                    <Button.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"/>
-                        </Style>
-                    </Button.Resources>
-                </Button>
+                    <Button Content="Назад" x:Name="BackBtn" Click="BackBtn_Click"  Grid.Column="0" Grid.Row="1" Width="200" Height="40">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
 
+                    <Button Content="Советы" x:Name="NotesBtn" Click="NotesBtn_Click" Grid.Column="0" Grid.Row="0" Width="200" Height="40">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
 
-                <Image Grid.Column="1" Grid.RowSpan="2" Margin="5" Source="/Image/zastavka.png" MinWidth="75" MinHeight="75"/>
+                    <Image Grid.Column="1" Grid.RowSpan="2" Margin="5" Source="/Image/zastavka.png" MinWidth="75" MinHeight="75"/>
 
-            </Grid>
-        </Border>
+                </Grid>
+            </Border>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
+    
 </Window>

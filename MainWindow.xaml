@@ -25,12 +25,12 @@
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1">
                 <StackPanel Orientation="Vertical">
                     <Label Content="Улиточки приветствуют Вас!" Style="{StaticResource TitleTextStyle}"/>
-                    <Label Content="Здесь вы найдете исчерпывающую информацию &#xA;о различных видах улиток, их особенностях и &#xD;&#xA;требониях к содержанию.&#xA;" Height="94" Width="437"/>
+                    <Label Content="Здесь вы найдете исчерпывающую информацию &#xA;о различных видах улиток, их особенностях и &#xA;требониях к содержанию.&#xA;"  />
                 </StackPanel>
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="2">
-                <Label FontSize="16" Content="Наше приложение предназначено как для начинающих,&#xD;&#xA;так и для опытных любителей улиток. Мы постарались &#xD;&#xA;сделать его максимально удобным и информативным,&#xD;&#xA;чтобы каждый пользователь мог найти ответы на все &#xD;&#xA;свои вопросы." Height="131" Width="460"/>
+                <Label FontSize="16" Content="Наше приложение предназначено как для начинающих,&#xD;&#xA;так и для опытных любителей улиток. Мы постарались &#xD;&#xA;сделать его максимально удобным и информативным,&#xD;&#xA;чтобы каждый пользователь мог найти ответы на все &#xD;&#xA;свои вопросы."/>
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="3">
@@ -44,8 +44,7 @@
                         <ColumnDefinition Width="103*"/>
                     </Grid.ColumnDefinitions>
 
-                    <Button Content="Справочник" x:Name="SnailsBtn" Click="SnailsBtn_Click" Margin="5,0" Grid.Column="0" Grid.Row="0"
-                            Height="30" Width="150">
+                    <Button Content="Справочник" x:Name="SnailsBtn" Click="SnailsBtn_Click" Margin="5,0" Grid.Column="0" Grid.Row="0">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>
@@ -53,8 +52,7 @@
                         </Button.Resources>
                     </Button>
 
-                    <Button Content="Советы" x:Name="NotesBtn" Click="NotesBtn_Click" Margin="5,0" Grid.Column="0" Grid.Row="1"
-                            Height="30" Width="150">
+                    <Button Content="Советы" x:Name="NotesBtn" Click="NotesBtn_Click" Margin="5,0" Grid.Column="0" Grid.Row="1">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>

@@ -33,12 +33,17 @@
         <Setter Property="Foreground" Value="{StaticResource MainTextBrush}"/>
     </Style>
 
+    <Style TargetType="TextBlock" >
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="{StaticResource MainTextBrush}"/>
+    </Style>
+
     <Style TargetType="Button" >
         <Setter Property="Background" Value="{StaticResource DarkBrush}"/>
-        <Setter Property="MinWidth" Value="150"/>
-        <Setter Property="MinHeight" Value="30"/>
-        <Setter Property="MinWidth" Value="200"/>
-        <Setter Property="MinHeight" Value="40"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Height" Value="30"/>
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="Margin" Value="5"/>
     </Style>

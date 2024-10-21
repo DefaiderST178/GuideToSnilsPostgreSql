@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GuideToSnilsPostgreSql.Model;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace GuideToSnilsPostgreSql.View
 {
@@ -19,9 +10,24 @@ namespace GuideToSnilsPostgreSql.View
     /// </summary>
     public partial class SelectedSnail : Window
     {
-        public SelectedSnail()
+        private int ID {  get; set; }
+        public SelectedSnail(Snail selectedSnail)
         {
             InitializeComponent();
+            ID = Convert.ToInt32(selectedSnail.ID_snail)+1;
+            IdTB.Text = ID.ToString();
+            NameTB.Text = selectedSnail.Name;
+            ScientificNameTB.Text = selectedSnail.ScientificName;
+            DescriptionTB.Text = selectedSnail.Description;
+
+            AverageShellSizeTB.Text = selectedSnail.AverageShellSize;
+            ShellColorTB.Text = selectedSnail.ShellColor;
+            BodyColorTB.Text = selectedSnail.BodyColor;
+            LifeSpanInYearsTB.Text = selectedSnail.LifeSpanInYears;
+
+            string path = "/Image/" + selectedSnail.Images;
+            ImageTB.Source = new BitmapImage(new Uri(path, UriKind.Relative));
         }
+
     }
 }
