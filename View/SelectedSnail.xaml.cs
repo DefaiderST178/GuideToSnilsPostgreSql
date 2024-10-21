@@ -29,5 +29,20 @@ namespace GuideToSnilsPostgreSql.View
             ImageTB.Source = new BitmapImage(new Uri(path, UriKind.Relative));
         }
 
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                AllSnails allSnails = new AllSnails();
+                this.Hide();
+                allSnails.Show();
+                this.Close();
+                MessageBox.Show("Переход успешен", "Система", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка\n" + ex, "Система", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

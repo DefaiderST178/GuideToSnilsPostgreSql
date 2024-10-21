@@ -2,8 +2,6 @@
 using Npgsql;
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Security.Cryptography;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -52,7 +50,11 @@ namespace GuideToSnilsPostgreSql.View
         {
             try
             {
-
+                MainWindow mainWindow = new MainWindow();
+                this.Hide();
+                mainWindow.Show();
+                this.Close();
+                MessageBox.Show("Переход успешен", "Система", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
@@ -92,6 +94,11 @@ namespace GuideToSnilsPostgreSql.View
             {
                 MessageBox.Show("Ошибка\n" + ex, "Система", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void notesListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

@@ -117,8 +117,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\Snail.cs" />
+    <Compile Include="View\AllNotes.xaml.cs">
+      <DependentUpon>AllNotes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\AllSnails.xaml.cs">
       <DependentUpon>AllSnails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SelectedNote.xaml.cs">
+      <DependentUpon>SelectedNote.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SelectedSnail.xaml.cs">
       <DependentUpon>SelectedSnail.xaml</DependentUpon>
@@ -143,7 +149,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\AllNotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\AllSnails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SelectedNote.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -181,29 +195,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\ampuliry1.jpg" />
-    <Resource Include="Image\ampuliry2.jpg" />
-    <Resource Include="Image\ampuliry3.jpg" />
     <Resource Include="Image\bitini1.jpg" />
-    <Resource Include="Image\bitini2.jpg" />
-    <Resource Include="Image\bitini3.jpg" />
     <Resource Include="Image\helena1.jpg" />
-    <Resource Include="Image\helena2.jpg" />
-    <Resource Include="Image\helena3.jpg" />
     <Resource Include="Image\katushka1.jpg" />
-    <Resource Include="Image\katushka2.jpg" />
-    <Resource Include="Image\katushka3.jpg" />
     <Resource Include="Image\lesnaya1.jpg" />
-    <Resource Include="Image\lesnaya2.jpg" />
-    <Resource Include="Image\lesnaya3.jpg" />
     <Resource Include="Image\lomkay1.jpg" />
-    <Resource Include="Image\lomkay2.jpg" />
-    <Resource Include="Image\lomkay3.jpg" />
     <Resource Include="Image\lyja1.jpg" />
-    <Resource Include="Image\lyja2.jpg" />
-    <Resource Include="Image\lyja3.jpg" />
     <Resource Include="Image\mariza1.jpg" />
-    <Resource Include="Image\mariza2.jpg" />
-    <Resource Include="Image\mariza3.jpg" />
     <Resource Include="Image\med1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -213,43 +211,20 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\rainbow2.jpg" />
-    <Resource Include="Image\rainbow3.jpg" />
     <Resource Include="Image\sad1.jpg" />
-    <Resource Include="Image\sad2.jpg" />
-    <Resource Include="Image\sad3.jpg" />
     <Resource Include="Image\tigris1.jpg" />
-    <Resource Include="Image\tigris2.jpg" />
-    <Resource Include="Image\tigris3.jpg" />
     <Resource Include="Image\trubach1.jpg" />
-    <Resource Include="Image\trubach2.jpg" />
-    <Resource Include="Image\trubach3.jpg" />
     <Resource Include="Image\xata1.png" />
-    <Resource Include="Image\xata2.png" />
-    <Resource Include="Image\xata3.png" />
     <Resource Include="Image\zabota1.jpg" />
-    <Resource Include="Image\zabota2.jpg" />
-    <Resource Include="Image\zabota3.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image\med2.jpg" />
-    <Resource Include="Image\med3.jpg" />
     <Resource Include="Image\melanii_ulitki_1.jpg" />
-    <Resource Include="Image\melanii_ulitki_2.jpg" />
-    <Resource Include="Image\melanii_ulitki_3.jpg" />
     <Resource Include="Image\nature1.jpg" />
-    <Resource Include="Image\nature2.jpg" />
-    <Resource Include="Image\nature3.jpg" />
     <Resource Include="Image\omnom1.jpg" />
-    <Resource Include="Image\omnom2.jpg" />
-    <Resource Include="Image\omnom3.jpg" />
     <Resource Include="Image\pestro1.jpg" />
-    <Resource Include="Image\pestro2.jpg" />
-    <Resource Include="Image\pestro3.jpg" />
     <Resource Include="Image\pokemon1.jpg" />
-    <Resource Include="Image\pokemon2.jpg" />
-    <Resource Include="Image\pokemon3.jpg" />
     <Resource Include="Image\rainbow1.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,11 +1,11 @@
-﻿<Window x:Class="GuideToSnilsPostgreSql.View.AllSnails"
+﻿<Window x:Class="GuideToSnilsPostgreSql.View.AllNotes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql.View"
         mc:Ignorable="d"
-        Title="Справочник по улиткам" Height="450" Width="500" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}">
+        Title="Все советы" Height="450" Width="500" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}">
     <Viewbox>
         <Grid Height="450" Width="500">
             <Grid.RowDefinitions>
@@ -14,25 +14,11 @@
             </Grid.RowDefinitions>
 
             <ScrollViewer Grid.Row="0" >
-                <ListView Padding="10" x:Name="snailListView" SelectionChanged="SnailsList_SelectionChanged" Background="{StaticResource BackgroundGreenBrush}">
+                <ListView Padding="10" x:Name="notesListView" SelectionChanged="notesListView_SelectionChanged" Background="{StaticResource BackgroundGreenBrush}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Border Style="{StaticResource MainBorderStyle}" MinWidth="500" MinHeight="75">
-
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="1*"/>
-                                        <RowDefinition Height="1*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1*"/>
-                                        <ColumnDefinition Width="1*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Label Content="{Binding Name}" Grid.Row="0" Grid.Column="0"/>
-                                    <Label Content="{Binding ScientificName}" Grid.Row="1" Grid.Column="0"/>
-                                </Grid>
-
+                                <!--<Label Content="{Binding Name}" Grid.Row="0" Grid.Column="0"/>-->
                             </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -58,7 +44,7 @@
                         </Button.Resources>
                     </Button>
 
-                    <Button Content="Советы" x:Name="NotesBtn" Click="NotesBtn_Click" Grid.Column="0" Grid.Row="0" >
+                    <Button Content="Справочник" x:Name="BookBtn" Click="BookBtn_Click" Grid.Column="0" Grid.Row="0" >
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>
@@ -73,5 +59,5 @@
 
         </Grid>
     </Viewbox>
-    
+
 </Window>
