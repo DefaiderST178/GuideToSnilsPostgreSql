@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql.View"
         mc:Ignorable="d"
-        Title="Выбранный совет" MinHeight="450" MinWidth="800" Style="{StaticResource WindowStyle}" Width="800">
+        Title="Выбранная статья" MinHeight="450" MinWidth="700" Style="{StaticResource WindowStyle}" Width="700">
     <Viewbox>
-        <Grid Height="450" Width="800">
+        <Grid Height="450" Width="700">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="2*"/>
@@ -18,29 +18,45 @@
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="0" Grid.Column="0" Margin="10,5,10,5" >
-                <TextBlock Text=""/>
+                <TextBlock Text="" x:Name="TitleTB"/>
             </Border>
 
             <Border Style="{StaticResource TitleBorderStyle}" Grid.Row="0" Grid.Column="1" Margin="10,5,10,5" >
-                <TextBlock Text="Статья "/>
+                <TextBlock Text="Статья " x:Name="NoteTB"/>
             </Border>
 
-            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1" Grid.Column="0" Margin="10,5,10,5" >
-                <TextBlock Text=""/>
+            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,5,10,5" >
+                <TextBlock Text="" x:Name="DescriptionTB" Width="621" Height="122" TextWrapping="Wrap"/>
             </Border>
-            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="2" Grid.Column="0" Margin="10,5,10,5" >
-                <TextBlock Text=""/>
+
+            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Margin="10,5,10,5" >
+                <Image x:Name="ImageTB" Margin="20" />
             </Border>
-            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="3" Grid.Column="0" Margin="10,5,10,5" >
-                <TextBlock Text=""/>
-            </Border>
-            <Border Style="{StaticResource MainBorderStyle}" Grid.Row="4" Grid.Column="0" Margin="10,5,10,5" >
-                <TextBlock Text=""/>
-            </Border>
+
+            <Grid Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Button Content="Справочник" x:Name="SnailsBtn" Click="SnailsBtn_Click" Grid.Row="0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Content="Назад" x:Name="BackBtn" Grid.Row="1" Click="BackBtn_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
 
         </Grid>
     </Viewbox>

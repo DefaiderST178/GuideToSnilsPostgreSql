@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql.View"
         mc:Ignorable="d"
-        Title="Все советы" Height="450" Width="500" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}">
+        Title="Все статьи" Height="450" Width="500" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}">
     <Viewbox>
         <Grid Height="450" Width="500">
             <Grid.RowDefinitions>
@@ -17,8 +17,8 @@
                 <ListView Padding="10" x:Name="notesListView" SelectionChanged="notesListView_SelectionChanged" Background="{StaticResource BackgroundGreenBrush}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Border Style="{StaticResource MainBorderStyle}" MinWidth="500" MinHeight="75">
-                                <!--<Label Content="{Binding Name}" Grid.Row="0" Grid.Column="0"/>-->
+                            <Border Style="{StaticResource MainBorderStyle}" MinWidth="420" MinHeight="75">
+                                <Label Content="{Binding Title}" Grid.Row="0" Grid.Column="0"/>
                             </Border>
                         </DataTemplate>
                     </ListView.ItemTemplate>

@@ -36,7 +36,11 @@ namespace GuideToSnilsPostgreSql
         {
             try
             {
-                
+                AllNotes allNotes = new AllNotes();
+                this.Hide();
+                allNotes.Show();
+                this.Close();
+                MessageBox.Show("Переход успешен", "Система", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {

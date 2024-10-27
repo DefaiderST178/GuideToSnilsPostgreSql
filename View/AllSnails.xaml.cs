@@ -66,7 +66,11 @@ namespace GuideToSnilsPostgreSql.View
         {
             try
             {
-
+                AllNotes allNotes = new AllNotes();
+                this.Hide();
+                allNotes.Show();
+                this.Close();
+                MessageBox.Show("Переход успешен", "Система", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
@@ -74,7 +78,7 @@ namespace GuideToSnilsPostgreSql.View
             }
         }
 
-        private void SnailsList_SelectionChanged(object sender, SelectionChangedEventArgs e) // выбор улитки
+        private void SnailsList_SelectionChanged(object sender, SelectionChangedEventArgs e) // открытие выбранной улитки
         {
             try
             {
@@ -86,19 +90,12 @@ namespace GuideToSnilsPostgreSql.View
                     snailDetailsWindow.Show();
                     this.Close();
                 }
-
-                
                 MessageBox.Show("Переход успешен", "Система", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка\n" + ex, "Система", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void notesListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

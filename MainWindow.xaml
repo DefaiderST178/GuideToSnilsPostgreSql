@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql"
         mc:Ignorable="d"
-        Title="Главная страница - Улиточки" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}" >
+        Title="Главная - Улиточки" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}" >
     <Viewbox >
         <Grid Height="450" Width="500" Margin="5">
             <Grid.RowDefinitions>

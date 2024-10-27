@@ -29,13 +29,29 @@ namespace GuideToSnilsPostgreSql.View
             ImageTB.Source = new BitmapImage(new Uri(path, UriKind.Relative));
         }
 
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e) // открытие справочника
         {
             try
             {
                 AllSnails allSnails = new AllSnails();
                 this.Hide();
                 allSnails.Show();
+                this.Close();
+                MessageBox.Show("Переход успешен", "Система", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка\n" + ex, "Система", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void NotesBtn_Click(object sender, RoutedEventArgs e)  // открытие статей
+        {
+            try
+            {
+                AllNotes allNotes = new AllNotes();
+                this.Hide();
+                allNotes.Show();
                 this.Close();
                 MessageBox.Show("Переход успешен", "Система", MessageBoxButton.OK, MessageBoxImage.Information);
             }

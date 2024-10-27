@@ -98,7 +98,7 @@
                     </Button.Resources>
                 </Button>
 
-                <Button Content="Советы" x:Name="NotesBtn" Grid.Column="1" >
+                <Button Content="Советы" x:Name="NotesBtn" Grid.Column="1" Click="NotesBtn_Click" >
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"/>
