@@ -17,7 +17,7 @@
                 <ListView Padding="10" x:Name="notesListView" SelectionChanged="notesListView_SelectionChanged" Background="{StaticResource BackgroundGreenBrush}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Border Style="{StaticResource MainBorderStyle}" MinWidth="420" MinHeight="75">
+                            <Border Style="{StaticResource MainBorderStyle}" MinWidth="420" MinHeight="65">
                                 <Label Content="{Binding Title}" Grid.Row="0" Grid.Column="0"/>
                             </Border>
                         </DataTemplate>

@@ -4,6 +4,7 @@
     <Style TargetType="Window" x:Key="WindowStyle">
         <Setter Property="Background" Value="{StaticResource BackgroundGreenBrush}"/>
         <Setter Property="Icon" Value="/Image/zastavka.png"/>
+        <Setter Property="WindowState" Value="Maximized"/>
     </Style>
     
     <Style TargetType="Border" x:Key="MainBorderStyle">

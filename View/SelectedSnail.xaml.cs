@@ -14,7 +14,7 @@ namespace GuideToSnilsPostgreSql.View
         public SelectedSnail(Snail selectedSnail)
         {
             InitializeComponent();
-            ID = Convert.ToInt32(selectedSnail.ID_snail)+1;
+            ID = Convert.ToInt32(selectedSnail.ID_snail);
             IdTB.Text = ID.ToString();
             NameTB.Text = selectedSnail.Name;
             ScientificNameTB.Text = selectedSnail.ScientificName;
