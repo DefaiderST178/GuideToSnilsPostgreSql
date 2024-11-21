@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuideToSnilsPostgreSql"
         mc:Ignorable="d"
-        Title="Главная - Улиточки" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}" >
+        Title="Главная - Мир Улиток" MinHeight="450" MinWidth="500" Style="{StaticResource WindowStyle}" >
     <Viewbox >
         <Grid Height="450" Width="500" Margin="5">
             <Grid.RowDefinitions>
@@ -19,7 +19,7 @@
             </Grid.ColumnDefinitions>
 
             <Border Style="{StaticResource TitleBorderStyle}" Grid.Row="0">
-                <Label Content="Улиточки" Style="{StaticResource TitleTextStyle}"/>
+                <Label Content="Мир Улиток" Style="{StaticResource TitleTextStyle}"/>
             </Border>
 
             <Border Style="{StaticResource MainBorderStyle}" Grid.Row="1">
